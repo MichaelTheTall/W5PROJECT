@@ -11,12 +11,12 @@ class TestManufacturer < MiniTest::Test
 
   def test_name()
     result = @man1.name()
-    assert_equal("Floppotron", result)
+    assert_equal("Floppomatic", result)
   end
 
   def test_info()
     result = @man1.info()
-    assert_equal("akes the chops to makes the flops!", result)
+    assert_equal("Takes the chops to makes the flops!", result)
   end
 
 end
