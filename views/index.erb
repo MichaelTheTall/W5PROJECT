@@ -1,0 +1,8 @@
+<h1>Total Stock List</h1>
+
+<%for item in @stock%>
+  <p>Name: <%=item.name()%></p>
+  <p>Manufacturer: <%=item.manufacturer%> </p>
+  <p><a href="/stock/<%=item.id%>">Show item</a></p>
+  <hr />
+<%end%>

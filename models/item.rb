@@ -40,7 +40,7 @@ class Item
     return results.map {|i| Item.new(i)}
   end
 
-  def manu()
+  def manufacturer()
     sql = "SELECT * FROM manufacturers
     WHERE id = $1"
     values = [@man_id]
