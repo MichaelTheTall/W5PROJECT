@@ -4,7 +4,7 @@ require_relative("../item.rb")
 class TestItem < MiniTest::Test
 
   def setup
-    options = {"id" => 1, "name" => "Floppotron", "man_id" => "3",
+    options = {"id" => 1, "name" => "Floppotron", "man_id" => 3,
     "info" => "Flops with the best!", "stock" => 5, "cost" => 100, "sale" => 300}
 
     @item1 = Item.new(options)
