@@ -74,3 +74,10 @@ item6 = Item.new({
   "cost" => 1000,
   "sale" => 2000
 })
+
+item1.save
+item2.save
+item3.save
+item4.save
+item5.save
+item6.save
