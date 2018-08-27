@@ -16,6 +16,5 @@ CREATE TABLE items
   info TEXT,
   stock INT8,
   cost INT8,
-  sale INT8,
-  profit INT8
+  sale INT8
 );
