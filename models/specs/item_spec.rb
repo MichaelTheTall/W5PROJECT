@@ -11,7 +11,7 @@ class TestItem < MiniTest::Test
   end
 
   def test_name()
-    result = @item1.first_name()
+    result = @item1.name()
     assert_equal("Floppotron", result)
   end
 
