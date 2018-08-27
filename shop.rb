@@ -37,7 +37,7 @@ post '/stock/:id' do # update
 end
 
 post '/stock/:id/delete' do # delete
-  stock = Item.find( params[:id] )
+  stock = Item.find(params[:id])
   stock.delete()
   redirect to '/stock'
 end

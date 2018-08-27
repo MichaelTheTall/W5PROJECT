@@ -46,6 +46,7 @@ class Item
     values = [@man_id]
     results = SqlRunner.run(sql, values)
     return Manufacturer.new(results.first)
+    # return Manufacturer.new(results.first)[name]
   end
 
   def profit()
