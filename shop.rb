@@ -55,6 +55,11 @@ get '/manu/:id' do
   erb(:show_m)
 end
 
+get '/manu/:id/items' do
+  @man = Manufacturer.find(params[:id])
+  erb(:list_m)
+end
+
 post '/manu' do
   @man = Manufacturer.new(params)
   @man.save()
