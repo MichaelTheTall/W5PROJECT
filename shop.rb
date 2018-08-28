@@ -5,6 +5,18 @@ require_relative('./models/item.rb')
 require_relative('./models/manufacturer.rb')
 also_reload('./models/*')
 
+get '/' do
+  redirect to '/stock'
+end
+
+get '/support' do
+  erb(:support)
+end
+
+get '/about' do
+  erb(:about)
+end
+
 get '/stock' do # index
   @item = Item.all()
   erb(:index)
