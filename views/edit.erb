@@ -10,14 +10,9 @@
 
   <label for="man_id-field">Manufacturer:</label>
   <select name="man_id" id="man_id-field">
-    <option
-    value="1"
-    <%="selected" if @item.man_id == "1"%>
-    >Floppomatic</option>
-    <option
-    value="2"
-    <%="selected" if @item.man_id == "2"%>
-    >Doot-Tek</option>
+    <%for m in Manufacturer.all() do%>
+      <option value="<%=m.id()%>"> <%=m.name()%> </option>
+    <%end%>
   </select>
 
   <label for="info-field">Description:</label>

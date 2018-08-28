@@ -5,8 +5,9 @@
 
   <label for="man_id">Manufacturer:</label>
     <select id="man_id-field" name="man_id">
-      <option value="1">Floppomatic</option>
-      <option value="2">Doot-Tek</option>
+      <%for m in Manufacturer.all() do%>
+        <option value="<%=m.id()%>"> <%=m.name()%> </option>
+      <%end%>
     </select>
 
   <label for="info">Description:</label>
