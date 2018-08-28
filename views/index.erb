@@ -1,7 +1,7 @@
 <h1>Total Stock List</h1>
 
 <%for i in @item%>
-  <p>Name: <%=i.name%></p>
+  <p>Item Name: <%=i.name%></p>
   <p>Manufacturer: <%=i.manufacturer%> </p>
   <p>Stock Level: <%=i.stock%></p>
   <p><a href="/stock/<%=i.id%>">More details</a></p>

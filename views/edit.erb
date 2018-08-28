@@ -1,6 +1,6 @@
 <form method="post" action="/stock/<%=@item.id%>">
 
-  <label for="name">Name:</label>
+  <label for="name-field">Name:</label>
   <input
   type="text"
   name="name"
@@ -8,20 +8,19 @@
   value="<%=@item.name%>"
   />
 
-
-  <label for="man_id">Manufacturer:</label>
+  <label for="man_id-field">Manufacturer:</label>
   <select name="man_id" id="man_id-field">
     <option
-    value="Floppomatic"
+    value="1"
     <%="selected" if @item.man_id == "1"%>
     >Floppomatic</option>
     <option
-    value="Doot-Tek"
+    value="2"
     <%="selected" if @item.man_id == "2"%>
     >Doot-Tek</option>
   </select>
 
-  <label for="info">Description:</label>
+  <label for="info-field">Description:</label>
   <input
   type="text"
   name="info"
@@ -29,7 +28,7 @@
   value="<%=@item.info%>"
   />
 
-  <label for="stock">Stock level:</label>
+  <label for="stock-field">Stock level:</label>
   <input
   type="number"
   name="stock"
@@ -37,7 +36,7 @@
   value="<%=@item.stock%>"
   />
 
-  <label for="cost">Cost price: £</label>
+  <label for="cost-field">Cost price: £</label>
   <input
   type="number"
   name="cost"
@@ -45,7 +44,7 @@
   value="<%=@item.cost%>"
   />
 
-  <label for="sale">Sale price: £</label>
+  <label for="sale-field">Sale price: £</label>
   <input
   type="number"
   name="sale"

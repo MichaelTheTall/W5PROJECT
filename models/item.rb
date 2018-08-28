@@ -1,5 +1,7 @@
 require_relative('../db/sql_runner.rb')
 require_relative('manufacturer.rb')
+require('pry-byebug')
+
 class Item
 
   attr_accessor(:id, :name, :man_id, :info, :stock, :cost, :sale)
@@ -35,6 +37,7 @@ class Item
   end
 
   def update()
+    # binding.pry()
     sql = "UPDATE items
     SET
     (
@@ -45,7 +48,7 @@ class Item
       cost,
       sale
     )
-    VALUES
+    =
     (
       $1, $2, $3, $4, $5, $6
     )
@@ -74,7 +77,8 @@ class Item
     WHERE id = $1"
     values = [@man_id]
     results = SqlRunner.run(sql, values)
-    return Manufacturer.new(results.first)
+    # binding.pry()
+    return results[0]["name"]
     # return results[:name]
   end
 
@@ -89,6 +93,13 @@ class Item
   end
 
   def self.delete(id)
+    sql = "DELETE FROM items
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
     sql = "DELETE FROM items
     WHERE id = $1"
     values = [id]

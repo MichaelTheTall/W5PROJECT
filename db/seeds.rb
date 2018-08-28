@@ -1,5 +1,6 @@
 require_relative('../models/item.rb')
 require_relative('../models/manufacturer.rb')
+require('pry-byebug')
 
 man1 = Manufacturer.new({
   "id" => 1,
@@ -81,3 +82,5 @@ item3.save
 item4.save
 item5.save
 item6.save
+
+binding.pry
