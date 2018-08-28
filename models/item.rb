@@ -105,4 +105,11 @@ class Item
     SqlRunner.run(sql, values)
   end
 
+  def warning()
+    return "HIGH" if @stock >= 20
+    return "MEDIUM" if @stock >= 10
+    return "LOW" if @stock >= 1
+    return "OUT OF STOCK" if @stock >= 0
+  end
+
 end
