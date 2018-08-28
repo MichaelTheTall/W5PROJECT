@@ -1,8 +1,8 @@
-require_relative('../db/sql_runner')
-
+require_relative('../db/sql_runner.rb')
+require_relative('manufacturer.rb')
 class Item
 
-  attr_reader(:id, :name, :man_id, :info, :stock, :cost, :sale)
+  attr_accessor(:id, :name, :man_id, :info, :stock, :cost, :sale)
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -75,7 +75,7 @@ class Item
     values = [@man_id]
     results = SqlRunner.run(sql, values)
     return Manufacturer.new(results.first)
-    # return Manufacturer.new(results.first)[name]
+    # return results[:name]
   end
 
   def profit()

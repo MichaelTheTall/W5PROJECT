@@ -5,7 +5,7 @@
   type="text"
   name="name"
   id="name-field"
-  value="<%=@item.first_name%>"
+  value="<%=@item.name%>"
   />
 
 
@@ -13,11 +13,11 @@
   <select name="man_id" id="man_id-field">
     <option
     value="Floppomatic"
-    <%="selected" if @item.topping == "Floppomatic"%>
+    <%="selected" if @item.man_id == "1"%>
     >Floppomatic</option>
     <option
     value="Doot-Tek"
-    <%="selected" if @item.topping == "Doot-Tek"%>
+    <%="selected" if @item.man_id == "2"%>
     >Doot-Tek</option>
   </select>
 
@@ -37,7 +37,7 @@
   value="<%=@item.stock%>"
   />
 
-  <label for="cost">Cost price:</label>
+  <label for="cost">Cost price: £</label>
   <input
   type="number"
   name="cost"
@@ -45,7 +45,7 @@
   value="<%=@item.cost%>"
   />
 
-  <label for="sale">Sale price:</label>
+  <label for="sale">Sale price: £</label>
   <input
   type="number"
   name="sale"

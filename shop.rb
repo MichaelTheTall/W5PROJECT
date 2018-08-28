@@ -7,7 +7,7 @@ require_relative('./models/manufacturer.rb')
 also_reload('./models/*')
 
 get '/stock' do # index
-  @stock = Item.all()
+  @item = Item.all()
   erb(:index)
 end
 
@@ -16,18 +16,18 @@ get '/stock/new' do # new
 end
 
 get '/stock/:id' do # show
-  @stock = Item.find(params[:id])
+  @item = Item.find(params[:id])
   erb(:show)
 end
 
 post '/stock' do # create
-  @stock = Item.new(params)
-  @stock.save()
+  @item = Item.new(params)
+  @item.save()
   erb(:create)
 end
 
 get '/stock/:id/edit' do # edit
-  @stock = Item.find(params[:id])
+  @item = Item.find(params[:id])
   erb(:edit)
 end
 
@@ -37,7 +37,7 @@ post '/stock/:id' do # update
 end
 
 post '/stock/:id/delete' do # delete
-  stock = Item.find(params[:id])
-  stock.delete()
+  @item = Item.find(params[:id])
+  @item.delete()
   redirect to '/stock'
 end
