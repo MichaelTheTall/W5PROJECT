@@ -40,3 +40,39 @@ post '/stock/:id/delete' do # delete
   @item.delete()
   redirect to '/stock'
 end
+
+get '/manu' do
+  @man = Manufacturer.all()
+  erb(:index_m)
+end
+
+get '/manu/new' do
+  erb(:new_m)
+end
+
+get '/manu/:id' do
+  @man = Manufacturer.find(params[:id])
+  erb(:show_m)
+end
+
+post '/manu' do
+  @man = Manufacturer.new(params)
+  @man.save()
+  erb(:create_m)
+end
+
+get '/manu/:id/edit' do
+  @man = Manufacturer.find(params[:id])
+  erb(:edit_m)
+end
+
+post '/manu/:id' do
+  Manufacturer.new(params).update
+  redirect to '/manu'
+end
+
+post '/manu/:id/delete' do
+  @man = Manufacturer.find(params[:id])
+  @man.delete()
+  redirect to '/manu'
+end

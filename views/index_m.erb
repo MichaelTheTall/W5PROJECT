@@ -1,0 +1,7 @@
+<h1>Manufacturer List</h1>
+
+<%for m in @man%>
+  <p>Manufacturer Name: <%=m.name%></p>
+  <p><a href="/manu/<%=m.id%>">More details</a></p>
+  <hr />
+<%end%>

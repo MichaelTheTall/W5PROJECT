@@ -1,0 +1,10 @@
+<h1>Manufacturer <%=@man.id%> Details:</h1>
+<br>
+<p>Name: <%=@man.name%></p>
+<p>Description: <%=@man.info%></p>
+<br>
+<p><a href="/manu/<%=@man.id%>/edit">Edit Manufacturer</a></p>
+<br>
+<form method="post" action="/manu/<%=@man.id%>/delete">
+  <input type="submit" value="Delete Manufacturer"/>
+</form>

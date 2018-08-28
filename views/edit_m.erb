@@ -1,0 +1,20 @@
+<form method="post" action="/manu/<%=@man.id%>">
+
+  <label for="name-field">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%=@man.name%>"
+  />
+
+  <label for="info-field">Description:</label>
+  <input
+  type="text"
+  name="info"
+  id="info-field"
+  value="<%=@man.info%>"
+  />
+
+  <input type='submit' value="Edit Manufacturer?">
+</form>

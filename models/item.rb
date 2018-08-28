@@ -37,7 +37,6 @@ class Item
   end
 
   def update()
-    # binding.pry()
     sql = "UPDATE items
     SET
     (
