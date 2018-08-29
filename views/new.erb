@@ -1,26 +1,28 @@
+<h1>Add new item to stock:</h1>
+
 <form method="post" action="/stock">
 
   <label for="name">Name:</label>
     <input id="name-field" type="text" name="name" />
-
+<br>
   <label for="man_id">Manufacturer:</label>
     <select id="man_id-field" name="man_id">
       <%for m in Manufacturer.all() do%>
         <option value="<%=m.id()%>"> <%=m.name()%> </option>
       <%end%>
     </select>
-
+<br>
   <label for="info">Description:</label>
     <input id="info-field" type="text" name="info">
-
+<br>
   <label for="stock">Stock level:</label>
     <input id="stock-field" type="number" name="stock"/>
-
+<br>
   <label for="cost">Cost price:</label>
     <input id="cost-field" type="number" name="cost"/>
-
+<br>
   <label for="sale">Sale price:</label>
     <input id="sale-field" type="number" name="sale"/>
-
+<br>
   <input type='submit' value="Add Item"/>
 </form>
