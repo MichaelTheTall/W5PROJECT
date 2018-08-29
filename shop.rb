@@ -6,7 +6,11 @@ require_relative('./models/manufacturer.rb')
 also_reload('./models/*')
 
 get '/' do
-  redirect to '/stock'
+  redirect to '/home'
+end
+
+get '/home' do
+  erb(:home)
 end
 
 get '/support' do
@@ -34,7 +38,7 @@ end
 post '/stock' do # create
   @item = Item.new(params)
   @item.save()
-  erb(:create)
+  redirect to '/stock'
 end
 
 get '/stock/:id/edit' do # edit
@@ -75,7 +79,7 @@ end
 post '/manu' do
   @man = Manufacturer.new(params)
   @man.save()
-  erb(:create_m)
+  redirect to '/stock'
 end
 
 get '/manu/:id/edit' do

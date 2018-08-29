@@ -1,7 +1,18 @@
 <h1>Manufacturer List</h1>
 
+<table style="width:100%">
+  <tr>
+    <th>Manufacturer Name:</th>
+    <th>Description:</th>
+    <th>View Stock:</th>
+    <th>More details:</th>
+  </tr>
 <%for m in @man%>
-  <p>Manufacturer Name: <%=m.name%></p>
-  <p><a href="/manu/<%=m.id%>">More details</a></p>
-  <hr />
+  <tr>
+  <td><%=m.name%></td>
+  <td><%=m.info%></td>
+  <td class="center"><a href="/manu/<%=m.id%>/items">View Stock</a></td>
+  <td class="center"><a href="/manu/<%=m.id%>">More Details</a></td>
+  </tr>
 <%end%>
+</table>

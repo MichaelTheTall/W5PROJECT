@@ -1,15 +1,36 @@
-<h1>Item <%=@item.id%> Details:</h1>
+<h1>Item #<%=@item.id%> Details:</h1>
 <br>
-<p>Name: <%=@item.name%></p>
-<p>Manufacturer: <%=@item.manufacturer()%></p>
-<p>Description: <%=@item.info%></p>
-<p>Stock Level: <%=@item.stock%> - <%=@item.warning%></p>
-<p>Cost price: £<%=@item.cost%></p>
-<p>Sale price: £<%=@item.sale%></p>
-<p>Profit per item: £<%=@item.profit()%></p>
-<br>
-<p><a href="/stock/<%=@item.id%>/edit">Edit item</a></p>
-<br>
+<table style="width:100%">
+  <tr>
+    <th>Item Name:</th>
+    <th>Manufacturer:</th>
+    <th>Description:</th>
+    <th>Stock Level:</th>
+    <th>Cost Price:</th>
+    <th>Sale Price:</th>
+    <th>Profit per item:</th>
+  </tr>
+  <tr>
+    <td><%=@item.name%></td>
+    <td><%=@item.manufacturer%></td>
+    <td><%=@item.info%></td>
+    <td><%=@item.stock%> - <%=@item.warning%></td>
+    <td>£<%=@item.cost%></td>
+    <td>£<%=@item.sale%></td>
+    <td>£<%=@item.profit()%></td>
+  </tr>
+</table>
+<table class="center" style="width:100%">
+  <tr>
+    <td>
+<form method="get" action="/stock/<%=@item.id%>/edit">
+  <input type="submit" value="Edit item"/>
+</form>
+</td>
+<td>
 <form method="post" action="/stock/<%=@item.id%>/delete">
   <input type="submit" value="Delete item"/>
 </form>
+</td>
+</tr>
+</table>

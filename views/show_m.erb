@@ -1,11 +1,26 @@
-<h1>Manufacturer <%=@man.id%> Details:</h1>
-<br>
-<p>Name: <%=@man.name%></p>
-<p>Description: <%=@man.info%></p>
-<br>
-<p><a href="/manu/<%=@man.id%>/edit">Edit Manufacturer</a></p>
-<p><a href="/manu/<%=@man.id%>/items">View Stock</a></p>
-<br>
+<h1>Manufacturer #<%=@man.id%> Details:</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <th>Description:</th>
+  </tr>
+  <tr>
+    <td><%=@man.name%></td>
+    <td><%=@man.info%></td>
+  </tr>
+</table>
+<table class="center" style="width:100%">
+  <tr>
+    <td>
+<form method="get" action="/manu/<%=@man.id%>/edit">
+  <input type="submit" value="Edit Manufacturer"/>
+</form>
+</td>
+<td>
 <form method="post" action="/manu/<%=@man.id%>/delete">
   <input type="submit" value="Delete Manufacturer"/>
 </form>
+</td>
+</tr>
+</table>

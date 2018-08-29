@@ -3,7 +3,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
+    color: white;
     position: fixed;
     top: 0;
     width: 100%;
@@ -23,7 +24,7 @@ li a {
 }
 
 li a:hover {
-    background-color: green;
+    background-color: darkslategrey;
 }
 
 h1 {
@@ -31,9 +32,12 @@ h1 {
 }
 
 body {
+  margin: 0;
   padding-top: 50px;
   font-family: "Arial", Helvetica, sans-serif;
-  background-color: grey;
+  background-color: slategrey;
+  background-image: url("/bgtile.png");
+  color: white;
 }
 
 blockquote {
@@ -43,6 +47,11 @@ blockquote {
 p, label {
   font-size: 14pt;
   font-family: "Arial", Helvetica, sans-serif;
+}
+
+.sub {
+  font-style: italic;
+  font-size: 10pt;
 }
 
 footer {
@@ -77,7 +86,7 @@ select {
 input[type=button], input[type=submit], input[type=reset] {
   font-size: 14pt;
   font-family: "Arial", Helvetica, sans-serif;
-  background-color: green;
+  background-color: darkslategrey;
   border: none;
   border-radius: 4px;
   color: white;
@@ -85,4 +94,38 @@ input[type=button], input[type=submit], input[type=reset] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.center {
+  text-align: center;
+}
+
+.center a:link{
+  color: black;
+}
+
+.center a:visited{
+  color: black;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: darkslategrey;
+  color: black;
+}
+tr:nth-child(odd) {
+  background-color: slategrey;
+  color: black;
+}
+
+img {
+  border-radius: 15px;
 }
