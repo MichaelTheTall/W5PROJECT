@@ -79,7 +79,7 @@ end
 post '/manu' do
   @man = Manufacturer.new(params)
   @man.save()
-  redirect to '/stock'
+  redirect to '/manu'
 end
 
 get '/manu/:id/edit' do

@@ -1,9 +1,20 @@
 <h1>Stock List for <%=@man.name%></h1>
 
+<table style="width:100%">
+  <tr>
+    <th>Item Name:</th>
+    <th>Manufacturer:</th>
+    <th>Stock Level:</th>
+    <th>Sale Price:</th>
+    <th>More details:</th>
+  </tr>
 <%for i in @man.items%>
-  <p>Item Name: <%=i.name%></p>
-  <p>Manufacturer: <%=i.manufacturer%> </p>
-  <p>Stock Level: <%=i.stock%> - <%=i.warning%></p>
-  <p><a href="/stock/<%=i.id%>">More details</a></p>
-  <hr />
+  <tr>
+  <td><%=i.name%></td>
+  <td><%=i.manufacturer%></td>
+  <td><%=i.stock%> - <%=i.warning%></td>
+  <td>£<%=i.sale%></td>
+  <td class="center"><a href="/stock/<%=i.id%>">More Details</a></td>
+  </tr>
 <%end%>
+</table>
