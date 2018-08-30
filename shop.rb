@@ -1,9 +1,8 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 
 require_relative('./models/item.rb')
 require_relative('./models/manufacturer.rb')
-also_reload('./models/*')
 
 get '/' do
   redirect to '/home'

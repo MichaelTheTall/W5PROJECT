@@ -1,6 +1,5 @@
 require_relative('../db/sql_runner.rb')
 require_relative('manufacturer.rb')
-require('pry-byebug')
 
 class Item
 
@@ -76,9 +75,7 @@ class Item
     WHERE id = $1"
     values = [@man_id]
     results = SqlRunner.run(sql, values)
-    # binding.pry()
     return results[0]["name"]
-    # return results[:name]
   end
 
   def profit()
