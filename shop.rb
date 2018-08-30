@@ -1,6 +1,5 @@
 require('sinatra')
 require('sinatra/contrib/all') if development?
-
 require_relative('./models/item.rb')
 require_relative('./models/manufacturer.rb')
 
